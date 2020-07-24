@@ -1,15 +1,34 @@
 Data-Douglas_Peucker
 
-# Douglas - Peucker algorithm
-# Author. John D. Coryat 01/2007 USNaviguide.com
-# http://www.usnaviguide.com/douglas-peucker.htm
-# Maintainer: Mike Flannigan (temp4@mflan.com)
-#
-#
-# Douglas-Peucker polyline simplification algorithm. First draws single line
-# from start to end. Then finds largest deviation from this straight line, and if
-# greater than tolerance, includes that point, splitting the original line into
-# two new lines. Repeats recursively for each new line created.
+Douglas - Peucker algorithm
+Author. John D. Coryat 01/2007 USNaviguide.com
+http://www.usnaviguide.com/douglas-peucker.htm
+Maintainer: Mike Flannigan (temp4@mflan.com)
+
+
+Douglas-Peucker polyline simplification algorithm. First draws single line
+from start to end. Then finds largest deviation from this straight line, and if
+greater than tolerance, includes that point, splitting the original line into
+two new lines. Repeats recursively for each new line created.
+
+Data::Douglas_Peucker processes a list of 2 dimensional 
+data and reduces the number of records in the list using 
+the Douglas/Peucker algoritm.  So it produces a set of 
+2 dimensional data that is reduced in number, but 
+approximates the original set.
+
+
+A typical application is to reduce a set of 2 dimensional
+points that fall along a curve to a smaller set of 
+2 dimensional points that approximates the same curve.
+An example of this is a GPS track (waypoints along a 
+GPS track).
+
+Note that the value assigned to $tolerance is roughly the 
+number of meters distance that a point can be from the straight
+line drawn between two latitude/longitude points, one on each side, 
+and the point can be discarded.  So a higher number used for 
+$tolerance removes more points from the original set of lat/longs.
 
 
 INSTALLATION
