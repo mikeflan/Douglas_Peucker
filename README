@@ -1,15 +1,15 @@
 Data-Douglas_Peucker
 
-The README is used to introduce the module and provide instructions on
-how to install the module, any machine dependencies it may have (for
-example C compilers and installed libraries) and any other information
-that should be provided before the module is installed.
-
-A README file is required for CPAN modules since CPAN extracts the README
-file from a module distribution so that people browsing the archive
-can use it to get an idea of the module's uses. It is usually a good idea
-to provide version information here so that people can decide whether
-fixes for the module are worth downloading.
+# Douglas - Peucker algorithm
+# Author. John D. Coryat 01/2007 USNaviguide.com
+# http://www.usnaviguide.com/douglas-peucker.htm
+# Maintainer: Mike Flannigan (temp4@mflan.com)
+#
+#
+# Douglas-Peucker polyline simplification algorithm. First draws single line
+# from start to end. Then finds largest deviation from this straight line, and if
+# greater than tolerance, includes that point, splitting the original line into
+# two new lines. Repeats recursively for each new line created.
 
 
 INSTALLATION
