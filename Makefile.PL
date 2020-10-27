@@ -22,6 +22,13 @@ my %WriteMakefileArgs = (
     },
     dist  => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
     clean => { FILES => 'Data-Douglas_Peucker-*' },
+    META_MERGE => {
+        resources => {
+            repository => 'https://github.com/mikeflan/Douglas_Peucker',
+            bugtracker => 'https://github.com/mikeflan/Douglas_Peucker/issues',
+            homepage   => 'https://github.com/mikeflan/Douglas_Peucker',
+        },
+    },
 );
 
 # Compatibility with old versions of ExtUtils::MakeMaker
