@@ -23,3 +23,13 @@ jobs:
             perl Makefile.PL
             make
             make test
+
+      - name: Release tests
+        env:
+          RELEASE_TESTING: 1
+        run: |
+            cpanm --installdep .
+            cpanm --notest Test::CheckManifest Test::Pod::Coverage Pod::Coverage Test::Pod
+            perl Makefile.PL
+            make
+            make test
